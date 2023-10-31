@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['senha'];
     $id = $_POST['id'];
 
-    $sql = "INSERT INTO formulario (nome, email, senha, id)
+    $sql = "INSERT INTO usuarios (nome, email, senha, id)
     VALUES ('$name', '$email', '$password', '$id')";
 
     if ($conn->query($sql) === TRUE) {
