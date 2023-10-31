@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $id = $_POST['id'];
 
     $sql = "INSERT INTO usuarios (nome, email, senha)
-    VALUES ('$name', '$email', '$password')";
+    VALUES ('$name', '$email', '$password', '$id')";
 
     if ($conn->query($sql) === TRUE) {
       echo "Novo registro criado com sucesso";
