@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'];
     $id = $_POST['id'];
 
-    $sql = "INSERT INTO MyGuests (nome, email, senha, id)
+    $sql = "INSERT INTO formulario (nome, email, senha, id)
     VALUES ('$name', '$email', '$password', '$id')";
 
     if ($conn->query($sql) === TRUE) {
