@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['nome'];
     $email = $_POST['email'];
     $password = $_POST['senha'];
-    // $id = $_POST['id'];
+    $id = $_POST['id'];
 
-    $sql = "INSERT INTO usuarios (nome, email, senha)
+    $sql = "INSERT INTO usuarios (nome, email, senha, id)
     VALUES ('$name', '$email', '$password', '$id')";
 
     if ($conn->query($sql) === TRUE) {
