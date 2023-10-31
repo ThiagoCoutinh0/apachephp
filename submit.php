@@ -11,17 +11,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Conexão falhou: " . $conn->connect_error);
 }
-else {
-    echo "Sucesso";
-}
-
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['fname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $id = $_POST['id'];
 
-    $sql = "INSERT INTO MyGuests (firstname, email, password, id)
+    $sql = "INSERT INTO MyGuests (nome, email, senha, id)
     VALUES ('$name', '$email', '$password', '$id')";
 
     if ($conn->query($sql) === TRUE) {
@@ -31,5 +27,5 @@ else {
     }
 
     $conn->close();
-}*/
+}
 ?>
