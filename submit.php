@@ -12,9 +12,9 @@ if ($conn->connect_error) {
   die("Conexão falhou: " . $conn->connect_error);
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['fname'];
+    $name = $_POST['nome'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['senha'];
     $id = $_POST['id'];
 
     $sql = "INSERT INTO formulario (nome, email, senha, id)
