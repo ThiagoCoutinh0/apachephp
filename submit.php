@@ -11,8 +11,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Conexão falhou: " . $conn->connect_error);
 }
+else {
+    echo "Sucesso";
+}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['fname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -28,5 +31,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn->close();
-}
+}*/
 ?>
